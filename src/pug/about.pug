@@ -24,7 +24,7 @@ block main
       each member in seniorManagement
         .cell.team-member
           a(href="/profile-single.html", title="#{member.name}" rel="modal:open") 
-            img(src="/assets/img/" + member.image, alt="#{member.name}")
+            img(src="/assets/img/" + member.image, alt="#{member.name}" width="343" height="501")
             .team-member__info
               h4.team-member__title #{member.name}
               p E: #{member.email}
@@ -35,7 +35,7 @@ block main
        each member in solicitorsBarristers
         .cell.team-member
           a(href="/profile-single.html", title="#{member.name}" rel="modal:open")
-            img(src="/assets/img/" + member.image, alt="#{member.name}")
+            img(src="/assets/img/" + member.image, alt="#{member.name}" width="343" height="501")
             .team-member__info
               h4.team-member__title #{member.name}
               p E: #{member.email}
