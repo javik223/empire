@@ -1,0 +1,51 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Walsh Solicitors"
+block header
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css", rel="stylesheet")
+  
+block before-main
+  .slider
+    .slider__item
+      img(src="/assets/img/about.jpg", alt="Civil")
+block main
+  .grid-x
+    .medium-10
+      h3.primary-color About Walsh.
+      p Our team of solicitors and in-house Counsel have a wealth of experience to help you in all aspects of legal services. We specialise in Civil & Commercial Law, Crime, Education, Family, Wills and Probate. Walsh Solicitors prides itself with its diverse highly skilled professionals.
+  
+  - var seniorManagement =  [{name: "Terrence Walsh", image: "image1.jpg", email: "Terence.Walsh@walshsolicitors.com"}, {name: "Bash", image: "image2.jpg", email: "Bash@walshsolicitors.com"},{name: "Jon Shaw", image: "image1.jpg", email: "Jon.Shaw@walshsolicitors.com"},{name: "Andrew Brown", image: "image3.jpg", email: "Andrew.Brown@walshsolicitors.com"}, {name: "Carolyn McDaid", image: "image1.jpg", email: "Carolyn.McDaid@walshsolicitors.com"}]
+
+  - var solicitorsBarristers = [{name: "Arif Ashraf", image: "image1.jpg", email: "Imran.Majid@walshsolicitors.com"},{name: "Andrew Fisher-Smith",image: "image1.jpg", email: "Imran.Majid@walshsolicitors.com"},{name: "Lucy Glennon",image: "image1.jpg", email: "Lucy.Glennon@walshsolicitors.com"},{name: "Imran Majid",image: "image1.jpg", email: "Imran.Majid@walshsolicitors.com"},{name: "Derek Buxton",image: "image1.jpg", email: "Derek.Buxton@walshsolicitors.com"},{name: "Sam Whittaker ",image: "image1.jpg", email: "Sam.Whittaker@walshsolicitors.com"},{name: "Raj Chopra",image: "image1.jpg", email: "Raj.Chopra@walshsolicitors.com "},{name: "Trevor Freehily",image: "image1.jpg", email: "Trevor.Freehily@walshsolicitors.com"},{name: "Deanne McGinty",image: "image1.jpg", email: "Deanne.McGinty@walshsolicitors.com"},{name: "Shirley Kelly",image: "image1.jpg", email: "S.A.Kelly@Mac.com"},{name: "Claire Aldridge",image: "image1.jpg", email: "Claire.Aldridge@walshsolicitors.com"},{name: "Caroline King",image: "image1.jpg", email: "Caroline.King@walshsolicitors.com"},{name: "Stuart Kaufman",image: "image1.jpg", email: "Stuart.Kaufman@walshsolicitors.com"},{name: "Lesley Ashraf",image: "image1.jpg", email: "Lesley.Ashraf@walshsolicitors.com"}]
+
+  .team-category
+    h4.primary-color Senior Management Team
+    .grid-x.small-up-2.medium-up-3.large-up-4.grid-margin-x
+      each member in seniorManagement
+        .cell.team-member
+          a(href="/profile-single.html", title="#{member.name}" rel="modal:open") 
+            img(src="/assets/img/" + member.image, alt="#{member.name}")
+            .team-member__info
+              h4.team-member__title #{member.name}
+              p E: #{member.email}
+
+  .team-category
+    h4.primary-color Solicitors / Barristers
+    .grid-x.small-up-2.medium-up-3.large-up-4.grid-margin-x
+       each member in solicitorsBarristers
+        .cell.team-member
+          a(href="/profile-single.html", title="#{member.name}" rel="modal:open")
+            img(src="/assets/img/" + member.image, alt="#{member.name}")
+            .team-member__info
+              h4.team-member__title #{member.name}
+              p E: #{member.email}
+
+  p &nbsp;
+  p &nbsp;
+  
+block after-main  
+  include fragments/contact-form
+
+  .twitter-follow.grid-container
+    include fragments/twitter-content
+    

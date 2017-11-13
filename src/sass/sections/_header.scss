@@ -1,0 +1,20 @@
+header {
+  .logo {
+    width: rem-calc(220);
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+
+    @include breakpoint(medium only) {
+      width: rem-calc(250);
+    }
+
+    @include breakpoint(large) {
+      width: rem-calc(300);
+    }
+  }
+}
+.header {
+  background-color: $black;
+  color: $white;
+  padding: 4px;
+}

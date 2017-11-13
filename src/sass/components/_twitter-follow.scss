@@ -1,0 +1,13 @@
+.twitter-follow {
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(40);
+
+  @include breakpoint(medium up) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+  }
+
+  div {
+    columns: 200px 3;
+  }
+}

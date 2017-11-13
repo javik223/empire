@@ -1,0 +1,345 @@
+.intro {
+  margin-bottom: rem-calc(60);
+}
+main {
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(40);
+}
+
+.services-block-grid {
+  font-weight: bold;
+  color: $white;
+
+  .cell {
+    background-color: $primary;
+    margin-bottom: rem-calc(10);
+    padding: rem-calc(10);
+
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(20);
+      padding: rem-calc(20);
+      padding-bottom: rem-calc(60);
+    }
+  }
+
+  &-slim {
+    .cell {
+      @include breakpoint(medium) {
+        padding: rem-calc(10);
+      }
+    }
+  }
+
+  &-sub {
+    .cell {
+      background-color: $black;
+
+      @include breakpoint(small only) {
+        margin-bottom: 0;
+      }
+
+      &.selected {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__header {
+    background-color: $black;
+    color: $white;
+    padding: rem-calc(10);
+    cursor: pointer;
+
+    h5 {
+      font-weight: bold;
+    }
+
+    span {
+      float: right;
+    }
+  }
+
+  h3,
+  h4,
+  h5 {
+    font-weight: bold;
+  }
+
+  a {
+    color: $white;
+    display: block;
+  }
+
+  .img-icon {
+    // max-width: 70%;
+    float: right;
+    height: rem-calc(50);
+
+    @include breakpoint(medium) {
+      padding-top: rem-calc(30);
+      height: rem-calc(100);
+    }
+
+    @include breakpoint(large) {
+      height: rem-calc(120);
+      padding-top: rem-calc(20);
+    }
+  }
+
+  .readmore {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 80%;
+    margin-bottom: 0;
+  }
+}
+
+// Homepage form
+
+.contact-form,
+.enquiry-form {
+  background-color: $black;
+  color: $white;
+  padding: rem-calc(20);
+
+  @include breakpoint(medium) {
+    padding: rem-calc(40);
+  }
+
+  &-gray {
+    background-color: $light-gray;
+    color: $black;
+  }
+
+  .button {
+    font-weight: bold;
+  }
+}
+
+.google-map {
+  height: 250px;
+  background-color: $light-gray;
+
+  @include breakpoint(medium) {
+    height: rem-calc(400);
+  }
+}
+
+.contact-info {
+  padding-top: rem-calc(20);
+  margin-bottom: rem-calc(60);
+}
+
+.services-content {
+  margin-top: rem-calc(30);
+}
+
+// Team Members on about page
+.team-category {
+  margin-top: rem-calc(15);
+
+  @include breakpoint(medium) {
+    margin-top: rem-calc(30);
+  }
+}
+
+.team-member {
+  position: relative;
+  margin-bottom: rem-calc(20);
+
+  &:hover {
+    .team-member__info {
+      padding-bottom: rem-calc(40);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    background-color: rgba($primary, 0.9);
+    color: $white;
+    padding: rem-calc(10);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__title {
+    // font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 8px;
+
+    @include breakpoint(medium only) {
+      font-size: rem-calc(9);
+    }
+
+    @include breakpoint(large) {
+      font-size: rem-calc(13);
+    }
+  }
+}
+
+.nav {
+  position: relative;
+
+  .icon-menu {
+    font-size: rem-calc(22);
+    color: $primary-color;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+    padding: rem-calc(20);
+    cursor: pointer;
+    @include hide-for(large);
+  }
+}
+// Navigation links
+
+.menu-icon {
+  @include hide-for(large);
+}
+.nav-links {
+  float: right;
+  position: relative;
+  top: 40%;
+  margin-left: 0;
+  transform: translate3d(0.01, 0.01, 0.01);
+  @include breakpoint(medium down) {
+    display: none;
+  }
+  // @include show-for(large);
+
+  &.show {
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    position: absolute;
+    top: auto;
+    top: 100%;
+    z-index: 2000;
+    width: 110%;
+    left: -5%;
+    background-color: $black;
+    padding-bottom: rem-calc(30);
+    padding-top: rem-calc(30);
+    // margin-left: 0;
+
+    li {
+      display: block;
+      width: 100%;
+      // width: 100%;
+      text-align: center !important;
+      margin-left: 0;
+      padding-left: 0 !important;
+      padding-top: rem-calc(6);
+      padding-bottom: rem-calc(6);
+      border-bottom: 1px solid rgba($light-gray, 0.1);
+      color: $white;
+      border-bottom: none;
+
+      &.dropdown {
+        &:after {
+          position: absolute;
+        }
+      }
+
+      a {
+        color: $white;
+      }
+
+      &.social-icons {
+        a {
+          margin-left: rem-calc(10);
+          margin-right: rem-calc(10);
+        }
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+    font-weight: bold;
+    padding-left: rem-calc(40);
+    text-align: right;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.dropdown {
+      &:after {
+        font-family: "icomoon";
+        content: "\e903";
+        padding-left: rem-calc(10);
+      }
+      > ul {
+        background-color: $black;
+        position: absolute;
+        margin-top: rem-calc(10);
+        left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: rem-calc(10);
+        padding-top: rem-calc(5);
+        display: none;
+
+        @include breakpoint(medium down) {
+          background-color: darken($color: $light-gray, $amount: 83%);
+          position: relative;
+          left: 0;
+          margin-left: 0;
+          padding-left: rem-calc(20);
+          transform: none;
+        }
+
+        li {
+          display: block;
+          text-align: center;
+          padding: rem-calc(5) rem-calc(20);
+          margin: 0;
+          border-bottom: 1px solid rgba($light-gray, 0.1);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          a:hover {
+            color: $primary-color;
+          }
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Modal
+.modal {
+  border-radius: rem-calc(2);
+  padding: rem-calc(20);
+  max-width: 90%;
+
+  @include breakpoint(medium) {
+    max-width: 95%;
+  }
+
+  @include breakpoint(large) {
+    max-width: 80%;
+  }
+}
+
+.single-profile {
+  &__image {
+    margin-bottom: rem-calc(20);
+  }
+}

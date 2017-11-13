@@ -1,0 +1,78 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Walsh Solicitors"
+block before-main
+  .slider
+    .slider__item
+      img(src="/assets/img/banners/banner-1.jpg", alt="Banner1")
+block main
+  .grid-x.intro
+    h1.h2.large-9.primary-color One of the North West Premier Law firms with Solicitors across the region.
+    div.large-9
+      p Our team of solicitors and in-house Counsel have a wealth of experience to help you in all aspects of legal services. We specialise in Civil & Commercial Law, Crime, Education, Family, Wills and Probate. 
+      a(href="/the-team", title="Meet The Team").button  
+        strong MEET THE TEAM
+
+  .grid-x.medium-up-3.grid-margin-x.services-block-grid
+    .cell
+      a(href="/civil", title="Civil").grid-x
+        .small-9.medium-7.float-left
+          h4 Civil
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/civil.svg", alt="Civil").img-icon
+    
+    .cell
+      a(href="/civil", title="Civil").grid-x
+        .small-9.medium-7.float-left
+          h4 Commercial
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/commercial.svg", alt="Civil").img-icon
+
+    .cell
+      a(href="/civil", title="Civil").grid-x
+        .small-9.medium-7.float-left
+          h4 Education
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/education.svg", alt="Civil").img-icon
+    
+    .cell
+      a(href="/civil", title="Civil").grid-x
+        .small-9.medium-7.float-left
+          h4 Crime
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/crime.svg", alt="Crime").img-icon
+    
+    .cell
+      a(href="/civil", title="Civil").grid-x
+        .small-9.medium-7.float-left
+          h4 Family
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/family.svg", alt="Civil").img-icon
+
+    .cell 
+      a(href="/civil", title="Private").grid-x
+        .small-9.medium-7.float-left
+          h4 Private
+          p.readmore Read More &nbsp; &nbsp;
+            span.icon-arrow-right
+        .small-3.medium-5.float-left
+          img(src="/assets/img/private.svg", alt="Private").img-icon
+
+block after-main
+  include fragments/contact-form
+  
+  
+  .twitter-follow.grid-container
+    include fragments/twitter-content
+    
+    

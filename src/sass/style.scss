@@ -1,0 +1,29 @@
+@import "settings";
+@import "foundation";
+@import "fonts";
+
+// Sections
+@import "./sections/header";
+@import "./sections/footer";
+@import "./sections/main";
+
+// Components
+@import "./components/_social-icons";
+@import "./components/_twitter-follow";
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-xy-grid-classes;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-button;
+
+.primary-color {
+  color: $primary;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}

@@ -1,0 +1,35 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Walsh Solicitors"
+block before-main
+  .slider
+    .slider__item
+      img(src="/assets/img/contact-walsh-solicitors.jpg", alt="Contact Walsh Solicitors")
+block main
+  .grid-x
+    .medium-4.cell.contact-info
+      h3.primary-color Contact
+      h5.primary-color Head Office
+      p
+       | 22 Manchester Road, <br>
+       | Haslingden, Rossendale, Lancashire, <br>
+       | BB4 5ST <br>
+       | <strong> Tel: 01706 230 300 <br>
+       | Email: haslingden@walshsolicitors.com </strong>
+      
+    .medium-8.cell
+      include fragments/enquiry-form
+
+block after-main  
+  .grid-container-full
+    .google-map <iframe
+      |  width="100%"
+      |  height="100%"
+      |  frameborder="0" style="border:0"
+      |  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-wZmhzwx_buQ6Sk_6tKHfrBesmKEbbMk
+      |    &q=22+Manchester+Road,+Haslingden,+Rossendale, Lancashire" allowfullscreen>
+      | </iframe>
+
+  .twitter-follow.grid-container
+    include fragments/twitter-content
+    

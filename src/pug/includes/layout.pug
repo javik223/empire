@@ -1,0 +1,25 @@
+block variables
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title || "Wash variables"}
+    link(href="/assets/css/style.css", rel="stylesheet")
+    
+    block header
+    
+    
+  body
+    include ./header
+    block before-main
+    main.grid-container
+      block main
+    block after-main
+    include ./footer
+    block after-footer
+    block scripts
+      script(src="/assets/js/jquery.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js")
+      
+      script(src="/assets/js/app.js")

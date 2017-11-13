@@ -1,0 +1,45 @@
+header.grid-container.full
+  .header.hide-for-large
+    .grid-container
+      .grid-x
+        .small-6.cell
+          include ../fragments/social-icons.pug
+        
+        .small-6.cell
+          span.float-right Tel: 01706 230 300
+  
+  nav.grid-container
+    .grid-x.nav
+      .small-8.medium-6.cell
+        a(href="/", title="Walsh Solicitors") 
+          img(src="/assets/img/walsh-solicitors-logo.svg", alt="Walsh solicitors").logo
+      .small-4.medium-6.cell
+        div.icon-menu
+        
+        ul.nav-links
+          li 
+            a(href="/about.html", title="About") About
+          li.dropdown
+            a(href="/services-single.html", title="Services") Services
+
+            ul
+              li
+                a(href="civil", title="Civil") Civil
+              li 
+                a(href="commecial", title="Commercial") Commercial  
+              li 
+                a(href="education", title="Education") Education
+                
+              li 
+                a(href="crime", title="crime") Crime 
+              li 
+                a(href="family", title="Family") Family
+              li 
+                a(href="private", title="Private") Private
+          li
+            a(href="/contact.html", title="Contact Walsh Solicitors") Contact
+          li.social-icons
+            include ../fragments/social-icons-links
+            
+            
+            
