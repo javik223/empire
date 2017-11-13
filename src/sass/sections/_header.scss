@@ -17,4 +17,9 @@ header {
   background-color: $black;
   color: $white;
   padding: 4px;
+
+  .tel {
+    color: $white;
+    text-decoration: none;
+  }
 }

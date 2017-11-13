@@ -190,10 +190,10 @@ main {
   .icon-menu {
     font-size: rem-calc(22);
     color: $primary-color;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    float: right;
+    right: 0;
     padding: rem-calc(20);
     cursor: pointer;
     @include hide-for(large);

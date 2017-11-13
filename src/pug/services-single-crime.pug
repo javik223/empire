@@ -1,0 +1,62 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Walsh Solicitors"
+block before-main
+  .slider
+    .slider__item
+      img(src="/assets/img/civil.jpg", alt="Civil")
+block main
+  .grid-x
+    .medium-10
+      h3.primary-color Crime.
+      p Litigation is a generic term to cover the process by which public and private legal disputes are resolved. They can be resolved via negotiation or use of the courts.
+  
+  .services-block-grid__header.hide-for-medium
+    h5 Select Area &nbsp;
+      span.icon.icon-arrow-down
+  .grid-x.medium-up-3.grid-margin-x.services-block-grid.services-block-grid-slim.services-block-grid-sub.hide-for-small-only
+    .cell.selected
+      a(href="#", title="Civil")
+          h5 Professional Negligence
+    
+    .cell
+      a(href="#", title="Civil")
+          h5 General Ligitation
+    
+    .cell
+      a(href="#", title="Civil")
+          h5 Personal Injury
+
+    .cell
+      a(href="#", title="Civil")
+          h5 Sales of Goods
+
+    .cell
+      a(href="#", title="Civil")
+          h5 Clinical Negligence
+
+    .cell
+      a(href="#", title="Civil")
+          h5 TALTA
+
+    .cell
+      a(href="#", title="Civil")
+          h5 Sex Offences
+  .grid-x.services-content
+    .medium-8.cell
+      h4.primary-color Professional Negligence
+      p In order to consider whether there is Professional Negligence we consider each case on its individual merits. For any negligence claim we have to establish whether the duty of care has fell below the standard that is expected. We then assess whether this has caused a loss to you and calculate how much loss you have suffered.
+      p All elements of Negligence and Causation and Loss have to be present in order to deal with the negligence.
+      p It may result in the need of an expert report to be instructed in order to consider whether negligence has occurred. We have a panel of experts who can assist you with this.
+      p What can Walsh do for you? <br>
+      p We will consider working No Win No Fee on these cases which means you may not need to pay for the litigation cost.
+      p We have a wealth of experience in dealing with Professional Negligence Claims. With our panel of experts and with our expertise in dealing with these matters we can guide you through the process.
+      p What we also offer is a unique review and opinion of the merits of the case. The review is usually done via a written advice by a Barrister. The Barrister will give you advice on what information we need and what the realistic prospects of your case are. The Barrister will also chart you a course of dealing with your case.
+      p We always aim at getting the cases dealt with swiftly and efficiently in order to save you time and money.
+
+block after-main  
+  include fragments/contact-form
+
+  .twitter-follow.grid-container
+    include fragments/twitter-content
+    

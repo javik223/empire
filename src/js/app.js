@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   // Nav menu dropdown
   var navLinks = $(".nav-links");
-  var menuDropdown = navLinks.find(".dropdown");
+  var menuDropdown = $(".nav-links .dropdown");
 
   menuDropdown.click(function(e) {
     var dropDownElement = $(this).find("ul");
@@ -29,7 +29,9 @@ $(document).ready(function() {
       $(this).removeClass(".open");
       dropDownElement.stop().slideUp();
     }
+  });
 
+  menuDropdown.find("> a").click(function(e) {
     e.preventDefault();
   });
   menuDropdown.hover(
