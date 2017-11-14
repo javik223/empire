@@ -326,11 +326,12 @@ main {
 // Modal
 .modal {
   border-radius: rem-calc(2);
-  padding: rem-calc(20);
-  max-width: 90%;
+  padding: rem-calc(12);
+  max-width: 95%;
 
   @include breakpoint(medium) {
     max-width: 95%;
+    padding: rem-calc(20);
   }
 
   @include breakpoint(large) {
