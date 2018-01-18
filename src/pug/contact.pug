@@ -1,35 +1,49 @@
 extends ./includes/layout.pug
 block variables
-  - var title = "Walsh Solicitors"
+  - var title = "Maintenance - Empire Estates"
+
 block before-main
-  .slider
-    .slider__item
-      img(src="/assets/img/contact-walsh-solicitors.jpg", alt="Contact Walsh Solicitors")
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Online Sale Service")
+      .hero__text Contact Us
+  
+  include ./includes/property-search
+  
+
 block main
-  .grid-x
-    .medium-4.cell.contact-info
-      h3.primary-color Contact
-      h5.primary-color Head Office
-      p
-       | 22 Manchester Road, <br>
-       | Haslingden, Rossendale, Lancashire, <br>
-       | BB4 5ST <br>
-       | <strong> Tel: 01706 230 300 <br>
-       | Email: haslingden@walshsolicitors.com </strong>
+  .grid-x.grid-margin-x
+    .cell.medium-4
+      h4.border-bottom Contact Us
+      p &nbsp;
+      p 
+        strong Empire Estates Ltd <br>
+        | 39 Railway Street <br>
+        | Nelson <br>
+        | Lancashire <br>
+        | BB9 9SG
       
-    .medium-8.cell
-      include fragments/enquiry-form
+      p Tel: 01282 449922 <br>
+        | Email: info@empireestates.org.uk <br>
+        | Fax: 01282 447944 <br>
 
-block after-main  
-  .grid-container-full
-    .google-map <iframe
-      |  width="100%"
-      |  height="100%"
-      |  frameborder="0" style="border:0"
-      |  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-wZmhzwx_buQ6Sk_6tKHfrBesmKEbbMk
-      |    &q=22+Manchester+Road,+Haslingden,+Rossendale, Lancashire" allowfullscreen>
-      | </iframe>
+      p 
+        strong Opening Times: <br>
+        | Monday-Friday 9:00am till 6:00pm
+        | Saturday- 10:00am till 4:00pm
+        | Sunday- Closed
+    .cell.medium-8
+      .enquiry-form
+        .enquiry-form__header Enquiry Form
 
-  .twitter-follow.grid-container
-    include fragments/twitter-content
-    
+        form(action="/enquiry" method="post")  
+          .enquiry-form__group
+            input(type="text" name="name" placeholder="Name*")
+            input(type="text", name="phone-number" placeholder="Phone Number*")
+            input(type="text" name="email" placeholder="Email*")
+            input(type="text" name="address" placeholder="Address (Optional)")
+            textarea(name="message", cols="30", rows="6" placeholder="Message*")
+            input(type="submit", value="SEND").button
+
+
+block before-footer
+  include ./includes/before-footer-view-all

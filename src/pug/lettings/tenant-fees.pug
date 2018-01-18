@@ -1,0 +1,52 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Buy Properties - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Buy Properties")
+      h1.hero__text Tenancy Fees
+  
+  include ../includes/property-search
+  
+
+block main
+  h3.border-bottom Tenancy Fees  
+  .detail-tenancy 
+    .detail-tenancy__item 
+      .detail-tenancy__desc Tenancy Fee -Initial Applicant (includes referencing, contract negotiation, agreeing terms, arranging the Tenancy &amp; agreements)
+      .detail-tenancy__price £150 1st applicant
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Tenancy Fee -Each Additional Adult Applicant (includes referencing, contract negotiation, agreeing terms, arranging the Tenancy & agreements)
+      .detail-tenancy__price £100 for each additional adult
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Guarantor Fee –per Tenancy (includes referencing, agreeing terms, arranging the Tenancy & Guarantor agreements
+      .detail-tenancy__price £100 per tenancy
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Late Rent Payment Fee -If your rent is more than 5days late then you are liable for the late rent payment fee.
+      .detail-tenancy__price £100 per tenancy
+    
+    .detail-tenancy__item 
+      .detail-tenancy__desc Copy of tenancy agreement if lost or required
+      .detail-tenancy__price £15
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Loss of keys
+      .detail-tenancy__price £20 each key
+    
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Lock change
+      .detail-tenancy__price £65
+
+    .detail-tenancy__item 
+      .detail-tenancy__desc Terminating the tenancy on or before expiry date
+      .detail-tenancy__price £89
+  
+block before-footer
+  include ../includes/blank-footer.pug
+  
+  

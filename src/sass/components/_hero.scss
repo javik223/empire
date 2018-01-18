@@ -1,0 +1,72 @@
+.hero {
+  background-color: $black;
+  min-height: 200;
+
+  &__background {
+    img {
+      width: 100%;
+      opacity: 0.5;
+    }
+  }
+
+  &__text {
+    @extend .h2;
+    color: $white;
+
+    &:after {
+      content: "";
+      padding-top: rem-calc(40);
+      border-bottom: rem-calc(3) solid $white;
+      width: rem-cacl(50);
+      display: inline-block;
+    }
+  }
+}
+
+.hero-with-text {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include breakpoint(medium down) {
+    display: block;
+    float: left;
+    overflow: hidden;
+  }
+
+  img {
+    opacity: 0.5;
+
+    @include breakpoint(medium down) {
+      height: 100%;
+      max-width: none;
+      max-height: rem-calc(200);
+    }
+  }
+
+  .hero__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $white !important;
+    text-align: center;
+    padding-bottom: rem-calc(20);
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 25%;
+      left: 0;
+      right: 0;
+      border-bottom: 3px solid $white;
+      margin-top: rem-calc(10);
+      margin-left: auto;
+      margin-right: auto;
+
+      @include breakpoint(medium up) {
+        margin-top: rem-calc(20);
+      }
+    }
+  }
+}

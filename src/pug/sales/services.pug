@@ -1,0 +1,68 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Buy Properties - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/services-hero.jpg", alt="Our Services")
+      h1.hero__text Services
+  
+  include ../includes/property-search
+  
+
+block main
+
+  .grid-x.grid-margin-x
+    .tab
+      ul.tab__links
+        li.active
+          a(href="#services", title="Services") Services 
+        li
+          a(href="#Lettings", title="Lettings") Lettings 
+        li
+          a(href="#landlords", title="Landlords") Landlords 
+        li
+          a(href="#insurance", title="Insurance") Insurance 
+        li
+          a(href="#sales", title="Sales") Sales 
+        li
+          a(href="#conveyancing", title="Conveyancing") Conveyancing       
+      .tab__contents
+        .tab__content
+          h3.border-bottom Lettings
+          p 
+          strong Whether you are looking for a detached family home, a little love nest for you and your partner, would like to move out of your parent’s home, or would like to set up a business, Empire Lettings can help! We have a range of properties from a 1 bed flat to large detached houses. We have all types of Commercial properties to let and lease, whatever the need we are all open hands.
+          p &nbsp;
+
+          h3.border-bottom Guide to Renting
+
+          .guide
+            .guide__item 
+              h5 Step 1: Find the right property
+              p Search through our website to find the right property for you, and simply give us a call! We’ll make an appointment for a viewing with you and start the rental process. We appreciate that everyone has busy lives so we do viewings 5 days a week 9am- 6pm and Saturdays <br> 
+              | 10am – 4pm.
+            .guide__item 
+              h5 Step 2: Secure the property
+              p If you decide the property is the right one for you we require a holding deposit (One months rent) which secures the property for you. This forms part of your security deposit. You will then receive our terms of letting.
+            .guide__item 
+              h5 Step 3: Credit and Reference Checking Process
+              p We will check one reference which can be either the previous landlord, professional citizen or employer reference – but remember we need applicants to provide the right information! Once completed we will contact you to arrange a tenancy agreement signing at one of our offices.
+            .guide__item 
+              h5 Step 4: Signing the Tenancy Agreement
+              p Your scheduled appointment will take approx 30 Min’s and we require photographic ID and proof of current address. As standard we take one months rent in advance and one months rent deposit.
+            .guide__item 
+              h5 Step 5: Moving in
+              p Before moving in you will be issued with full tenant information, an inventory of contents and condition, a set of keys and instruction for future payment. Each property has a dedicated maintenance manager – you will be advised at your tenancy agreement signing.
+            .guide__item 
+                h5 Step 6: During your Tenancy
+                p Empire Letting are your first point of contact for any issue relating to a management property. We will do our very best to resolve any issues you may have. If you have any maintenance or other issues to report please contact us.
+            .guide__item 
+              h5 Step 7: Ending your Tenancy
+              p Once we have received adequate notice to end your tenancy we will ask you to make a termination appointment. At this time a Empire Letting representative will visit the property to check you out.
+            .guide__item 
+                p
+                  strong Empire Letting wish you all the best in acquiring your new home.
+
+block before-footer
+  include ../includes/before-footer-view-all
+  

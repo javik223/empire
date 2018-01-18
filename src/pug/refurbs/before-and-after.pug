@@ -1,0 +1,55 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Before and After - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Before and After")
+      .hero__text Mayfair Road
+  
+  include ../includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x
+    .cell.medium-10.large-8
+      h3.border-bottom Mayfair Road
+      
+      p 
+        strong Property Description <br>
+        | - Mayfair Rd, Nelson, BB9 5JP <br>
+        | 3 bedroom mid terraced house, 1 reception room, separate kitchen, ground floor wc, bathroom, front and rear garden
+      p  
+        strong Customer requirement <br>
+        | To make a modern day home for an average size family family.
+      p 
+        strong work to carry out <br>
+        | To modernise property with new kitchen, nwew bathroom, full gas central heating, upvc front and rear external doors,new internal doors, fully decorate the property, new flooring throughout.
+      
+      p 
+        strong completed works
+        | The property was put online to let for 1 day and was let straight away to a local shop owner.
+  
+  .grid-x.grid-margin-x.image-block
+      .cell.medium-6
+        h4 Before
+        .grid-y
+          img(src="/assets/img/before-and-after/before-1.jpg", alt="Before 1")
+          img(src="/assets/img/before-and-after/before-2.jpg", alt="Before 2")
+          img(src="/assets/img/before-and-after/before-3.jpg", alt="Before 3")
+          img(src="/assets/img/before-and-after/before-4.jpg", alt="Before 4")
+          img(src="/assets/img/before-and-after/before-5.jpg", alt="Before 5")
+          
+
+
+      .cell.medium-6
+        h4 After
+        .grid-y
+          img(src="/assets/img/before-and-after/after-1.jpg", alt="After 1")
+          img(src="/assets/img/before-and-after/after-2.jpg", alt="After 2")
+          img(src="/assets/img/before-and-after/after-3.jpg", alt="After 3")
+          img(src="/assets/img/before-and-after/after-4.jpg", alt="After 4")
+          img(src="/assets/img/before-and-after/after-5.jpg", alt="After 5")
+
+block before-footer
+  include ../includes/before-footer-view-all

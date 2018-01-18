@@ -1,0 +1,36 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Terms and Conditions - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/about-us-hero.jpg", alt="About Us")
+      .hero__text About Us
+  
+  include ./includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x
+    .cell.medium-10.large-8
+      h3.border-bottom About Us
+      
+      p
+        strong We believe our success is based on experience, expertise and our practical approach. Every client who comes to us has different requirements and different circumstances.By taking the time to learn about these, to study and to listen, we offer better solutions.
+      
+      p
+        strong Definitions and Interpretation <br>
+
+      p We started with the clear aim of becoming the biggest and best Sales & Letting Agency in our surrounding areas. Our major strength is in the residential property market, dealing with owner occupiers and property investors. Empire Estates Team Ltd is an independent company run by experienced Entrepreneurs with ambitious plans to build one of the UK’s premier Sales & Letting Agencies.
+
+      p Many of our staff started their working life in independent estate agency businesses where growing the business was vital and the emphasis was always on selling rather than just processing. Our team of Property Professionals have over 25 years of experience between them in selling and managing properties.
+      
+      p When you choose your estate agent you are making an investment. A wise investment should make you money whilst a poor one, as we all know, can cost you dearly. That is why our emphasis is not on cost but on service. Although that experience counts for a lot the ability to deal with clients in a friendly and professional manner is also paramount and at Empire Estates Team our staff will go out of their way to help you move. We believe that it is our attention to detail, together with a passion for really understanding our customers’ needs, that sets us aside from the rest.
+
+      p We hope you enjoy using our site and we look forward to hearing from you.
+      
+block before-footer
+  include ./includes/before-footer-view-all.pug
+  
+  
+

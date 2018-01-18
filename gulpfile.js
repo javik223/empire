@@ -12,7 +12,7 @@ const sourcemaps = require("gulp-sourcemaps");
 // Pug Task
 gulp.task("pug", () => {
   return gulp
-    .src("src/pug/*.pug")
+    .src("src/pug/**/*.pug")
     .pipe(plumber({ errorHandler: onError }))
     .on("error", onError)
     .pipe(pug())

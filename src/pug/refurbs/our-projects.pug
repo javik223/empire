@@ -1,0 +1,45 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Our Projects - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/refurb-hero.jpg", alt="Our Projects")
+      h1.hero__text Our Projects
+  
+  include ../includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x
+    .grid-x.grid-margin-x.cell.swap-cells-mobile
+      .cell.medium-4
+        h3.border-bottom  Mayfair Road
+        p Property Description - Mayfair Rd, Nelson, BB9 5JP. 3 bedroom mid terraced house, 1 reception room, separate kitchen, ground floor wc, bathroom, front and rear garden
+        p
+         strong View before and after images
+
+        p
+          a(href="/refurbs/before-and-after.html", title="Before and After").button.secondary 
+            strong View
+      
+      .cell.medium-8.margin-40
+        img(src="/assets/img/projects/project-1.jpg", alt="Project 1")
+      
+    .grid-x.grid-margin-x.cell.swap-cells-mobile
+      .cell.medium-4
+        h3.border-bottom  Property 2
+        p Property Description - Mayfair Rd, Nelson, BB9 5JP. 3 bedroom mid terraced house, 1 reception room, separate kitchen, ground floor wc, bathroom, front and rear garden
+        p
+          strong View before and after images
+        p
+          a(href="/refurbs/before-and-after.html", title="Before and After").button.secondary 
+            strong View
+      .cell.medium-8.margin-40
+        img(src="/assets/img/projects/project-2.jpg", alt="Project 2")
+      
+
+block before-footer
+  include ../includes/blank-footer.pug
+  
+  

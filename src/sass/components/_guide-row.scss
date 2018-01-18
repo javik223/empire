@@ -1,0 +1,21 @@
+.guide {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+    margin-bottom: rem-calc(20);
+    border-bottom: 1px solid $gray;
+    width: 100%;
+
+    @include breakpoint(medium up) {
+      flex-basis: 45%;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

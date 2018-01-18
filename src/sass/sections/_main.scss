@@ -1,351 +1,224 @@
-.intro {
-  margin-bottom: rem-calc(60);
-}
-main {
-  padding-top: rem-calc(40);
-  padding-bottom: rem-calc(40);
+.grid-container {
+  clear: both;
 }
 
-.services-block-grid {
-  font-weight: bold;
+// Homepage footer snippets
+.news-snippet {
+  background-color: $black;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
   color: $white;
+  margin-top: rem-calc(56) !important;
 
-  .cell {
-    background-color: $primary;
-    margin-bottom: rem-calc(10);
-    padding: rem-calc(10);
-
-    @include breakpoint(medium) {
-      margin-bottom: rem-calc(20);
-      padding: rem-calc(20);
-      padding-bottom: rem-calc(60);
-    }
-  }
-
-  &-slim {
-    .cell {
-      @include breakpoint(medium) {
-        padding: rem-calc(10);
-      }
-    }
-  }
-
-  &-sub {
-    .cell {
-      background-color: $black;
-
-      @include breakpoint(small only) {
-        margin-bottom: 0;
-      }
-
-      &.selected {
-        background-color: $primary;
-      }
-    }
-  }
-
-  &__header {
-    background-color: $black;
-    color: $white;
-    padding: rem-calc(10);
-    cursor: pointer;
-
-    h5 {
-      font-weight: bold;
-    }
-
-    span {
-      float: right;
-    }
-  }
-
-  h3,
-  h4,
-  h5 {
-    font-weight: bold;
+  &__wrapper {
+    @include xy-cell(12);
   }
 
   a {
     color: $white;
-    display: block;
-  }
 
-  .img-icon {
-    // max-width: 70%;
-    float: right;
-    height: rem-calc(50);
+    &:hover {
+      color: $gray;
+      text-decoration: underline;
+    }
+  }
+}
+
+.news-snippet__header,
+.border-bottom {
+  position: relative;
+  display: block;
+  padding-bottom: rem-calc(8);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: rem-calc(-2);
+    display: block;
+    width: 100px;
+    left: 0;
+    border-bottom: 3px solid $gold;
+    display: inline-block;
+  }
+}
+
+// Sponsors and Partners logos'
+.sponsors {
+  @include xy-grid;
+  padding: rem-calc(32) 0;
+
+  &__item {
+    @include xy-cell();
+    text-align: center;
+    margin: auto auto;
+    padding: rem-calc(8);
 
     @include breakpoint(medium) {
-      padding-top: rem-calc(30);
-      height: rem-calc(100);
+      @include xy-cell(1 of 3);
+      margin: auto auto;
     }
 
     @include breakpoint(large) {
-      height: rem-calc(120);
-      padding-top: rem-calc(20);
+      @include xy-cell(1 of 5);
+      margin: auto auto;
+    }
+
+    img {
+      float: none;
+      margin: rem-calc(16) auto;
+      max-height: rem-calc(60);
+      max-width: 60%;
+
+      @include breakpoint(medium) {
+        max-width: 100%;
+      }
     }
   }
+}
 
-  .readmore {
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: 80%;
-    margin-bottom: 0;
+// Misc
+.full-center-button {
+  text-align: center;
+  width: 100%;
+  margin-top: rem-calc(40);
+  margin-bottom: rem-calc(40);
+  float: left;
+}
+
+// Blank space with padding
+.spacer {
+  margin-bottom: rem-calc(50);
+  @include clearfix;
+
+  @include breakpoint(medium up) {
+    margin-bottom: rem-calc(80);
   }
 }
 
-// Homepage form
-
-.contact-form,
-.enquiry-form {
-  background-color: $black;
-  color: $white;
-  padding: rem-calc(20);
-
-  @include breakpoint(medium) {
-    padding: rem-calc(40);
-  }
-
-  &-gray {
-    background-color: $light-gray;
-    color: $black;
-  }
-
-  .button {
-    font-weight: bold;
+// Image block
+.image-block {
+  img {
+    margin-bottom: rem-calc(20);
+    height: auto;
+    max-width: 100%;
   }
 }
 
-.google-map {
-  height: 250px;
-  background-color: $light-gray;
-
-  @include breakpoint(medium) {
-    height: rem-calc(400);
-  }
-}
-
-.contact-info {
-  padding-top: rem-calc(20);
-  margin-bottom: rem-calc(60);
-}
-
-.services-content {
-  margin-top: rem-calc(30);
-}
-
-// Team Members on about page
-.team-category {
-  margin-top: rem-calc(15);
-
-  @include breakpoint(medium) {
-    margin-top: rem-calc(30);
-  }
-}
-
-.team-member {
-  position: relative;
+// Box Margins
+.margin-20,
+.margin-bottom-20 {
   margin-bottom: rem-calc(20);
+}
 
-  &:hover {
-    .team-member__info {
-      padding-bottom: rem-calc(40);
+.margin-40,
+.margin-bottom-20 {
+  margin-bottom: rem-calc(40);
+}
+
+// Swap left and right cells
+.swap-cells-mobile {
+  @include breakpoint(small only) {
+    .cell:first-child {
+      @include flex-order(2);
+    }
+    .cell:last-child {
+      @include flex-order(1);
     }
   }
+}
 
-  &__info {
+// Property Carousel
+.carousel {
+  padding-bottom: rem-calc(20);
+
+  &_main {
+    margin-bottom: rem-calc(20);
     width: 100%;
-    background-color: rgba($primary, 0.9);
-    color: $white;
-    padding: rem-calc(10);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.3s ease-in-out;
-  }
 
-  &__title {
-    // font-weight: bold;
-    margin-bottom: 0;
-  }
-
-  p {
-    font-weight: bold;
-    margin-bottom: 0;
-    font-size: 8px;
-
-    @include breakpoint(medium only) {
-      font-size: rem-calc(9);
-    }
-
-    @include breakpoint(large) {
-      font-size: rem-calc(13);
-    }
-  }
-}
-
-.nav {
-  position: relative;
-
-  .icon-menu {
-    font-size: rem-calc(22);
-    color: $primary-color;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    padding: rem-calc(20);
-    cursor: pointer;
-    @include hide-for(large);
-  }
-}
-// Navigation links
-
-.menu-icon {
-  @include hide-for(large);
-}
-.nav-links {
-  float: right;
-  position: relative;
-  top: 40%;
-  margin-left: 0;
-  transform: translate3d(0.01, 0.01, 0.01);
-  @include breakpoint(medium down) {
-    display: none;
-  }
-  // @include show-for(large);
-
-  &.show {
-    @include breakpoint(medium down) {
-      display: block;
-    }
-  }
-
-  @include breakpoint(medium down) {
-    position: absolute;
-    top: auto;
-    top: 100%;
-    z-index: 2000;
-    width: 110%;
-    left: -5%;
-    background-color: $black;
-    padding-bottom: rem-calc(30);
-    padding-top: rem-calc(30);
-    // margin-left: 0;
-
-    li {
-      display: block;
+    img {
       width: 100%;
-      // width: 100%;
-      text-align: center !important;
-      margin-left: 0;
-      padding-left: 0 !important;
-      padding-top: rem-calc(6);
-      padding-bottom: rem-calc(6);
-      border-bottom: 1px solid rgba($light-gray, 0.1);
-      color: $white;
-      border-bottom: none;
-
-      &.dropdown {
-        &:after {
-          position: absolute;
-        }
-      }
-
-      a {
-        color: $white;
-      }
-
-      &.social-icons {
-        a {
-          margin-left: rem-calc(10);
-          margin-right: rem-calc(10);
-        }
-      }
     }
   }
 
-  li {
-    display: inline-block;
+  &_thumbnails {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      flex-basis: 23%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Details Table
+.details-table {
+  border: none;
+  border-spacing: rem-calc(1);
+  width: 100%;
+
+  td {
+    padding: rem-calc(4) rem-calc(8);
+  }
+  thead {
+    background-color: $gold;
+    color: $white;
     font-weight: bold;
-    padding-left: rem-calc(40);
-    text-align: right;
-    position: relative;
-    text-transform: uppercase;
-    cursor: pointer;
+    font-family: $serif-font-family;
+  }
+  tbody {
+    td {
+      background-color: #e5e5e5;
+      font-weight: bold;
 
-    &.dropdown {
-      &:after {
-        font-family: "icomoon";
-        content: "\e903";
-        padding-left: rem-calc(10);
-      }
-      > ul {
-        background-color: $black;
-        position: absolute;
-        margin-top: rem-calc(10);
-        left: 50%;
-        transform: translateX(-50%);
-        padding-bottom: rem-calc(10);
-        padding-top: rem-calc(5);
-        display: none;
-
-        @include breakpoint(medium down) {
-          background-color: darken($color: $light-gray, $amount: 83%);
-          position: relative;
-          left: 0;
-          margin-left: 0;
-          padding-left: rem-calc(20);
-          transform: none;
-        }
-
-        li {
-          display: block;
-          text-align: center;
-          padding: rem-calc(5) rem-calc(20);
-          margin: 0;
-          border-bottom: 1px solid rgba($light-gray, 0.1);
-
-          &:last-child {
-            border-bottom: none;
-          }
-
-          a:hover {
-            color: $primary-color;
-          }
-        }
-
-        a {
-          color: $white;
-        }
+      &:nth-child(2n) {
+        background-color: #b2aaa6;
+        font-weight: normal;
       }
     }
   }
 }
 
-// Modal
-.modal {
-  border-radius: rem-calc(2);
-  padding: rem-calc(12);
-  max-width: 95%;
+// Tenancy Fee table
+.detail-tenancy {
+  display: block;
+  // @include flex-direction(row);
+  // justify-content: space-between;
+  // align-items: bottom;
 
-  @include breakpoint(medium) {
-    max-width: 95%;
-    padding: rem-calc(20);
-  }
-
-  @include breakpoint(large) {
-    max-width: 80%;
-  }
-}
-
-.single-profile {
-  &__image {
+  &__item {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: rem-calc(20);
   }
-}
 
-// Modal
-.blocker {
-  padding: rem-calc(10);
+  &__desc {
+    flex-basis: 50%;
+  }
+
+  &__price {
+    font-weight: bold;
+    flex-basis: 30%;
+    align-self: flex-end;
+  }
+
+  @include breakpoint(small only) {
+    &__item {
+      display: block;
+    }
+
+    &__desc {
+      width: 80%;
+    }
+
+    &__price {
+      width: 100%;
+      clear: both;
+      text-align: right;
+      margin-bottom: rem-calc(20);
+    }
+  }
 }

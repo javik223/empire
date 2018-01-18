@@ -1,0 +1,35 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Online Sale Service - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/online-sale-service-hero.jpg", alt="Online Sale Service")
+      .hero__text Online Sale Service
+  
+  include ../includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x
+    .cell.medium-10.large-8
+      h3.border-bottom How It Works
+      
+      p Sell your house where ever you are once you have signed up for the online service one of our sales team will call you to discuss the sale of your property and take you through the process step by step. We will ask you to take pictures of your property and send to us via email and we would go through the property details together to get an accurate description to advertise your property.
+
+      p Once we have the property photos and description we will upload your property to Rightmove and our website and get your property on the market. The viewings will be carried out by yourself which our sales team will get you ready for and go through the do’s and dont’s before the viewing takes place after the viewing you leave the rest in our hands to negotiate the sale. We will liaise with the potential buyers all the way from initial viewing through to completion and you will have nothing to worry about.
+
+      ul 
+        li We advertise your property same way as selling with high street agent
+        li Experience sale staff with you from start to finish
+        li Advertise your property on main property portals
+        li Viewings booked through our sales team at your convenience
+        li Sale negotiation completed by our expert sales team
+        li Deal with solicitors on your behalf through to completion
+        li Expert advice a phone call away
+        li No Sale no fee
+        li No binding contract
+        li National coverage
+
+block before-footer
+  include ../includes/before-footer-view-all

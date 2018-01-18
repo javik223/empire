@@ -1,0 +1,83 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Let Properties - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/buy-properties-hero.jpg", alt="Let Properties")
+      h1.hero__text Search Results
+  
+  include ./includes/property-search
+  
+
+block main
+  - var properties = [{ img: "/assets/img/property-image.jpg", title: "Queensgate, Nelson BB9", amount: "135,000", description: "Beautiful family home for sale, located in a quiet area of Nelson", beds: "3 beds" }, { img: "/assets/img/property-image.jpg", title: "Napier Street Nelson BB9 OSSN", amount: "54,950", description: "NEWLY DECORATED, 2 receptions, separate kitchen, 2 large bedrooms and family bathroom. Central heated. Great Location. Well presented throughout", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "Heap Street Burnley BB10, 1RL", amount: "37,500", description: "First home buyer or investor – this home is worth a look. Situated close to Burnley town centre and schools", beds: "2 beds" }]
+
+  - var propertiesRent = [{ img: "/assets/img/property-image.jpg", title: "Wickworth Street Nelson BB9", amount: "390 PCM", description: "2 bedroom property to let in a popular area in Nelson.", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "11 Hobart Street, Burnley, BB11 3DQ", amount: "80 Per Week", description: "2 Bedroom terraced property TO LET in popular area of Burnley", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "Herbert Street, Burnley BB11 4Jx", amount: "80 Per Week", description: "1 Bedroom, Fully Re-furbished apartment TO LET in popular area of Burnley", beds: "1 bed" }]
+
+
+  .listing
+      //- h3.border-bottom Properties to let
+
+      .property-block
+        each property in properties
+          .property-block__item
+              a(href="/property-template.html", title=property.title) 
+                img(src=property.img, alt=property.title)
+              .property-block__item__content
+                h3.property-block__item__title #{property.title}
+                p 
+                  small #{property.description}
+
+              .property-block__item__specs
+                span £#{property.amount}
+                span #{property.beds}
+            
+              a(href="/property-template.html", title="View more").property-block__item__link.button.small VIEW MORE
+        
+        each property in properties
+          .property-block__item
+              a(href="/property-template.html", title=property.title)  
+                img(src=property.img, alt=property.title)
+              .property-block__item__content
+                h3.property-block__item__title #{property.title}
+                p 
+                  small #{property.description}
+
+              .property-block__item__specs
+                span £#{property.amount}
+                span #{property.beds}
+            
+              a(href="/property-template.html", title="View more").property-block__item__link.button.small VIEW MORE
+        .grid-x.grid-margin-x
+      .cell.medium-10
+        ul.pagination
+          li
+            a(href="1") &#12296;
+          li
+            a(href="1") 1
+          li
+            a(href="2") 2
+          li
+            a(href="3") 3
+          li
+            a(href="4") 4
+          li
+            a(href="5") 5
+          li.active 
+            a(href="6") 6
+          li
+            a(href="7") 7
+          li
+            a(href="8") 8
+          li
+            a(href="9") 9
+          li
+            a(href="10") 10 
+          li
+            a(href="10") &#12297;
+
+block before-footer
+  include ./includes/blank-footer.pug
+  
+  

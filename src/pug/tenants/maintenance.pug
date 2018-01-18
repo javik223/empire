@@ -1,0 +1,41 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Maintenance - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Online Sale Service")
+      .hero__text Maintenance
+  
+  include ../includes/property-search
+  
+
+block main
+  .enquiry-form
+    .enquiry-form__header Report A Problem
+
+    form(action="/enquiry" method="post")  
+      .enquiry-form__group.no-padding-bottom
+        label(for="problem") What is the problem?
+      .enquiry-form__group
+        select(name="problem")
+            option(value="Select") Select*
+        label(for="upload")
+        input(type="file", name="upload")
+      .enquiry-form__group
+        input(type="text" name="address1" placeholder="Address 1")
+        input(type="text", name="address2" placeholder="Address 2")
+        input(type="text" name="address3" placeholder="Address 3")
+        input(type="text" name="postcode" placeholder="Postcode*")
+
+      h5.enquiry-form__group__title Your Details  
+      .enquiry-form__group
+        input(type="text" name="name" placeholder="Name*")
+        input(type="text", name="email" placeholder="Email*")
+        input(type="text" name="telephone-number" placeholder="Telephone Number*")
+        input(type="text" name="mobile-number" placeholder="Mobile Number")
+        input(type="submit", value="SEND").button
+
+
+block before-footer
+  include ../includes/before-footer-view-all

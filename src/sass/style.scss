@@ -10,6 +10,17 @@
 // Components
 @import "./components/_social-icons";
 @import "./components/_twitter-follow";
+@import "./components/_property-block";
+@import "./components/_slider";
+@import "./components/_hero";
+@import "./components/_property-search";
+@import "./components/pagination";
+@import "./components/tab";
+@import "./components/_guide-row";
+@import "./components/enquiry-form";
+
+@import "./modules//typography";
+
 @include foundation-global-styles;
 @include foundation-typography;
 @include foundation-forms;
@@ -18,12 +29,14 @@
 @include foundation-float-classes;
 @include foundation-button;
 
-.primary-color {
-  color: $primary;
-}
-
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  float: left;
 }

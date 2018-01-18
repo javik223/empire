@@ -1,0 +1,23 @@
+.property-search-form {
+  @include xy-grid-container(full);
+  background-color: $gray;
+  clear: both;
+  margin-bottom: rem-calc(40);
+  padding-top: rem-calc(30);
+  padding-bottom: rem-calc(20);
+
+  input {
+    padding: rem-calc(12);
+    height: rem-calc(45);
+  }
+
+  input,
+  button {
+    margin-bottom: rem-calc(12);
+    border: none;
+  }
+
+  // .button {
+  //   width: 50%;
+  // }
+}

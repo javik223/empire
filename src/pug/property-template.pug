@@ -1,0 +1,110 @@
+extends ./includes/layout.pug
+block variables
+  - var title = "Buy Properties - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/buy-properties-hero.jpg", alt="Buy Properties")
+      h1.hero__text Properties to Buy
+  
+  include ./includes/property-search
+  
+
+block main
+  .h3.border-bottom Walton St, Nelson, BB9
+  p &nbsp;
+  .grid-x.grid-margin-x
+    .medium-8.cell
+      .carousel.js-carousel
+        ul.slides
+          li(data-thumb="/assets/img/carousel/carousel-thumb-1.jpg").carousel_main
+            img(src="/assets/img/carousel/carousel-main.jpg", alt="Carousel Main image")
+          li(data-thumb="/assets/img/carousel/carousel-thumb-2.jpg").carousel_main
+            img(src="/assets/img/carousel/carousel-main.jpg", alt="Carousel Main image")
+          li(data-thumb="/assets/img/carousel/carousel-thumb-3.jpg").carousel_main
+            img(src="/assets/img/carousel/carousel-main.jpg", alt="Carousel Main image")
+          li(data-thumb="/assets/img/carousel/carousel-thumb-4.jpg").carousel_main
+            img(src="/assets/img/carousel/carousel-main.jpg", alt="Carousel Main image")
+        //- .carousel_thumbnails
+        //-   div 
+        //-     img(src="/assets/img/carousel/carousel-thumb-1.jpg", alt="Carousel thumb")
+        //-   div 
+        //-     img(src="/assets/img/carousel/carousel-thumb-2.jpg", alt="Carousel thumb")
+        //-   div 
+        //-     img(src="/assets/img/carousel/carousel-thumb-3.jpg", alt="Carousel thumb")
+        //-   div 
+        //-     img(src="/assets/img/carousel/carousel-thumb-4.jpg", alt="Carousel thumb")
+    .medium-4.cell
+      table.details-table.margin-bottom-20
+        thead
+          tr
+            td(colspan=2) Property Details
+        tbody
+          tr
+            td Listing Type
+            td Residential
+          tr 
+            td Location
+            td Nelson
+          tr 
+            td Property Type
+            td Terraced
+          tr 
+            td Reception Rooms
+            td 1
+          tr 
+            td Bathrooms
+            td 1
+          tr
+            td Bedrooms
+            td 3
+          tr
+            td Parking
+            td Road
+          tr
+            td Front Garden
+            td No
+          tr
+            td Rear Garden
+            td No
+          tr
+            td Central Heating
+            td Yes
+          tr 
+            td Double Glazing
+            td Yes
+      h4 £44,995
+      p Interested in view this Property?
+
+      a(href="tel:01282 44 9922", title="Call us").button.secondary
+        strong CALL US ON: 01282 44 9922
+  .grid-x.grid-margin-x
+    .cell.medium-10
+        p &nbsp;
+        h5.font-primary Empire Estates are pleased to present to the market this fully renovated 3 bedroom property for sale located in a popular area of Nelson.
+        p This property has been taken back to brick and fully renovated!
+
+        p 
+          strong Ground floor
+          | Reception room: 4.93m x 4.97m – Neutral decor, log fire, UPVC double glazed window, fitted with blinds and a new carpet.
+          | Kitchen: Fully fitted kitchen, 4 hob gas burner & oven, extractor hood, splash back, cream units, tiled flooring, UPVC double glazed window and neutral decor.
+
+        p 
+          strong First Floor
+          | Master Bedroom: 3.30m x 2.27m – neutral decor, UPVC double glazed window and fitted with new carpet.
+          | Bedroom 2: 3.30m x 2.27m – UPVC double glazed window, neutral decor and fitted with new carpet.
+          | Bathroom: 2.15m x 1.98m – UPVC double glazed window, luxury modern shower cubicle, vanity area, fully tiled,WC, chrome towel rail and tall storage cupboard.
+
+        p 
+          strong Attic
+          | 4.91m x 3.84m – Spacious bedroom, neutral decor, UPVC double glazed window and fitted with brand new carpet.
+
+        p More details to follow.
+
+        p
+          h5.font-primary Like this Property? Call us today on: 01282 44 99 22 to arrange a viewing or simply find out more about the property.
+
+block before-footer
+  include ./includes/before-footer-back-link
+  
+  

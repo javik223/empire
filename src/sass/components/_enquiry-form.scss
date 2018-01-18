@@ -1,0 +1,81 @@
+.enquiry-form {
+  background-color: lighten($gray, 40%);
+  @include xy-grid-container();
+  @include xy-grid-collapse();
+  padding: 0 !important;
+
+  &__group {
+    padding: rem-calc(20);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint(small only) {
+      justify-content: center;
+    }
+
+    &.no-padding-bottom {
+      padding-bottom: 0;
+
+      @include breakpoint(small only) {
+        justify-content: left;
+        // text-align: first;
+      }
+    }
+
+    label {
+      font-size: 1em;
+    }
+  }
+
+  &__group__title {
+    @extend .border-bottom;
+    margin-left: rem-calc(20);
+    margin-top: rem-calc(20) !important;
+    position: relative;
+  }
+
+  &__header {
+    @extend h4;
+    width: 100%;
+    // float: left;
+    padding: rem-calc(8) !important;
+    padding-left: rem-calc(16) !important;
+    background-color: $gold;
+    color: $white !important;
+  }
+
+  input,
+  select,
+  textarea {
+    flex-basis: 100%;
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    @include breakpoint(medium up) {
+      flex-basis: 49%;
+    }
+  }
+
+  input[type="submit"] {
+    @extend .button;
+    @extend .secondary;
+    font-weight: bold;
+    flex-basis: 10em;
+    height: rem-calc(40);
+    min-width: rem-calc(150);
+    align-self: flex-end;
+
+    // &:hover {
+    //   background-color: $gold !important;
+    // }
+  }
+}
+
+.button.secondary {
+  &:hover {
+    background-color: $gold !important;
+  }
+}

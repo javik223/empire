@@ -1,0 +1,57 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Before and After - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/online-sale-service-hero.jpg", alt="Online Sale Service")
+      .hero__text Full Management Service
+  
+  include ../includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x
+    .cell.medium-10.large-8
+      h3.border-bottom Full Management Service
+      //- p &nbsp;
+      ul
+        li No obligation rental appraisal
+        li Advertising in local magazine/websites Rightmove and our own
+        li ‘To Let’ board erected
+        li Accompanied viewing service 6 days a week, including evenings
+        li Full tenant referencing
+        li Inventory on vacant and handover carried out, including photos*
+        li Preparation of Tenancy Agreement
+        li Collection of first months rent and full deposit in advance
+        li Advise all utility companies and local authority of change of liability
+        li Register the deposit with the Tenancy Deposit Scheme (DPS)  
+        li Set up a standing order for rent collections  
+        li Payment into your account by BACS  
+        li Monthly statement of income and expenditure  
+        li Regular property inspections with reports  
+        li Tenancy renewals  
+        li Management of all maintenance issues  
+        li Final inspection upon vacation and return of deposit  
+        li Issue notice to tenants if and when required  
+        li Rent guarantee insurance with legal expenses
+
+      p &nbsp;
+
+      h3.border-bottom Tenant Finding Fee
+      //- p &nbsp;
+      ul
+        li No Tenant, No Fee
+        li Finds you a Tenant within 4 Weeks
+        li Rental Evaluation and Photos
+        li Market your property
+        li Accompanied viewings and select most suitable Tenants
+        li Credit check Tenants 
+        li Draw up Tenancy Agreement
+        li Inventory before hand over of  keys
+        li Pass to you a full documented file
+        li Collection of first months rent and full deposit in advance
+
+
+block before-footer
+  include ../includes/before-footer-view-all

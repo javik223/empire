@@ -1,25 +1,182 @@
-header {
-  .logo {
-    width: rem-calc(220);
-    padding-top: rem-calc(20);
-    padding-bottom: rem-calc(20);
-
-    @include breakpoint(medium only) {
-      width: rem-calc(250);
-    }
-
-    @include breakpoint(large) {
-      width: rem-calc(300);
-    }
-  }
-}
 .header {
   background-color: $black;
   color: $white;
-  padding: 4px;
+  width: 100%;
+  float: left;
+  font-size: 90%;
+  position: relative;
+  z-index: 1000;
+}
 
-  .tel {
+.nav {
+  padding: rem-calc(16) auto;
+  float: left;
+  display: table;
+  width: 100%;
+  position: relative;
+
+  > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  /**
+  * Logo size for Desktop is set at 80px;
+  * while that for Mobile and tablet was set at 50px
+  **/
+  &__logo {
+    float: left;
+    padding-top: rem-calc(8);
+    padding-bottom: rem-calc(8);
+
+    img {
+      width: rem-calc(50);
+
+      @include breakpoint(large) {
+        width: rem-calc(80);
+      }
+    }
+  }
+
+  &__links {
+    margin: auto auto;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+
+      @include breakpoint(medium up) {
+        margin-left: rem-calc(4);
+      }
+
+      @include breakpoint(medium only) {
+        font-size: 0.9em;
+      }
+
+      /**
+      * Dropdown links
+      **/
+      &.dropdown {
+        position: relative;
+
+        > a:after {
+          content: "\e906";
+          padding-left: rem-calc(8);
+          font-family: "icomoon";
+          font-size: 0.7em;
+        }
+
+        > ul {
+          display: none;
+          background-color: darken($color: $gray, $amount: 5);
+          // width: 100%;
+          padding-left: 0;
+          margin-left: 0;
+
+          @include breakpoint(medium up) {
+            position: absolute;
+            top: rem-calc(30);
+            margin: auto auto;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $black;
+          }
+
+          li {
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &--mobile {
+      background: $gray;
+      float: left;
+      width: 100%;
+
+      ul {
+        padding: rem-calc(8) 0;
+
+        @include breakpoint(medium only) {
+          padding: rem-calc(8) 0;
+        }
+      }
+
+      @include breakpoint(small only) {
+        padding: rem-calc(16) 0;
+        position: absolute;
+        left: 0;
+        top: rem-calc(35);
+        border-bottom: 8px solid $black;
+        display: none;
+
+        li {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    // Link states
+
+    a {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: rem-calc(4) rem-calc(8);
+      display: inline-block;
+      border: 1px solid transparent;
+
+      @include breakpoint(small only) {
+        width: 100%;
+      }
+
+      &:hover {
+        color: $white;
+      }
+
+      &.active,
+      &:hover {
+        border: 1px solid rgba($white, 0.5);
+      }
+    }
+  }
+
+  &__social {
+    text-align: right;
+    a {
+      color: $black;
+      background-color: $white;
+      padding: rem-calc(4);
+      margin-left: rem-calc(8);
+    }
+  }
+}
+
+.nav__mobile__container {
+  background-color: $gray;
+  float: left;
+  width: 100%;
+  position: relative;
+
+  @include breakpoint(small only) {
+    padding: rem-calc(8);
+    border-bottom: 2px solid $black;
+  }
+
+  .nav__social {
+    position: relative;
+    float: right;
+  }
+}
+
+.menu-icon {
+  &:hover {
     color: $white;
-    text-decoration: none;
   }
 }

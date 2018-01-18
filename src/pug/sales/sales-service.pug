@@ -1,0 +1,53 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Online Sale Service - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/online-sale-service-hero.jpg", alt="Online Sale Service")
+      .hero__text Sales - Our Services
+  
+  include ../includes/property-search
+  
+
+block main
+  .grid-x.grid-margin-x.medium-up-2
+    .cell.margin-bottom-20
+      img(src="/assets/img/online-presence.jpg", alt="Online Presence")
+      p &nbsp;
+      h3.border-bottom Online Presence
+      p We use the leading property portal rightmove to make sure your buyers do not miss your property alongside our own website and social media.
+    
+    .cell.margin-bottom-20
+      img(src="/assets/img/text-messages.jpg", alt="Text Messages")
+      p &nbsp;
+      h3.border-bottom Text Messages
+      p We use text messaging to alert all the potential buyers on our lead list who are looking at properties in that particular area.
+
+    .cell.margin-bottom-20
+      img(src="/assets/img/social-media.jpg", alt="Social media")
+      p &nbsp;
+      h3.border-bottom Social Media
+      p Is a wide spread networking method and we thrive in making sure your property does not miss out on this new advertising tool.
+    
+    .cell.margin-bottom-20
+      img(src="/assets/img/expert-staff.jpg", alt="Expert Staff")
+      p &nbsp;
+      h3.border-bottom Expert Staff
+      p We are proud to say that we have staff who are landlords, property owners, and investors who have live experiences in the property field and are experts who have knowledge in all types of property matters with experience over 15 years.
+  
+    .cell.margin-bottom-20
+      img(src="/assets/img/photography.jpg", alt="Photography")
+      p &nbsp;
+      h3.border-bottom Photography
+      p We use only the best Cannon cameras with the latest technology and equipment to maximize your property exposure.
+    
+    .cell.margin-bottom-20
+      img(src="/assets/img/conveyancing.jpg", alt="Convenyancing")
+      p &nbsp;
+      h3.border-bottom Convenyancing
+      p We have our own conveyancing team who will make sure the after sale process is handled swiftly and professionally so you can rest assure your paperwork is handled carefully without delay.
+    
+
+block before-footer
+  include ../includes/before-footer-view-all

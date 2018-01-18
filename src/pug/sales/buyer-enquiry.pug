@@ -1,0 +1,50 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Buyer Enquiry - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Online Sale Service")
+      .hero__text Buyer Enquiry
+  
+  include ../includes/property-search
+  
+
+block main
+  .enquiry-form
+    .enquiry-form__header Valuation Form
+
+    form(action="/enquiry" method="post")  
+      h5.enquiry-form__group__title Locations of Interest
+      .enquiry-form__group
+        input(type="text", name="first-choice" placeholder="First Choice")
+        input(type="text" name="second-choice" placeholder="Second Choice")
+        input(type="text" name="third-choice" placeholder="Third Choice")
+      
+      h5.enquiry-form__group__title Property Information
+      .enquiry-form__group
+        input(type="text", name="maximum-price" placeholder="Maximum Price")
+        input(type="text" name="minimum-bedrooms" placeholder="Minimum Bedrooms")
+        select(name="minimum-bedrooms")
+          option(value="-") Minimum Bedrooms
+      
+      h5.enquiry-form__group__title Your Details
+      .enquiry-form__group
+        input(type="text", name="name" placeholder="Name*")
+        input(type="text", name="telephone" placeholder="Telephone*")
+        input(type="text" name="email" placeholder="Email")
+        input(type="text", name="confirm-email" placeholder="Confirm Email*")
+        input(type="text", name="mobile" placeholder="Mobile*")
+        input(type="text", name="address1" placeholder="Address 1")
+        input(type="text", name="address2" placeholder="Address 2")
+        input(type="text", name="address3" placeholder="Address 3")
+        input(type="text", name="town" placeholder="Town City")
+        input(type="text", name="county" placeholder="County")
+        input(type="text", name="postcode" placeholder="Postcode")
+        input(type="text", name="occupation" placeholder="Occupation")
+        input(type="text", name="additional-info" placeholder="Additional Info")
+        input(type="submit", value="SEND").button
+
+
+block before-footer
+  include ../includes/before-footer-view-all

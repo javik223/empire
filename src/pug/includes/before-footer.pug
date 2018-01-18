@@ -1,0 +1,16 @@
+- var sponsors = [ { logo: "/assets/img/sponsors/Burnley_logo.png", alt: "Burnley" }, { logo: "/assets/img/sponsors/The_Property_Ombudsman_logo.png", alt: "The Property Ombudsman" }, { logo: "/assets/img/sponsors/Rightmove_logo.png", alt: "Rightmove" }, { logo: "/assets/img/sponsors/DPS_logo.png", alt: "DPS" }, { logo: "/assets/img/sponsors/Arla_logo.png", alt: "Arla"} ]
+
+.grid-container
+  .sponsors
+    each sponsor in sponsors
+      div.sponsors__item
+        img(src=sponsor.logo, alt=sponsor.alt)
+    
+.news-snippet.grid-container.full
+  .grid-container
+    .news-snippet__wrapper
+      h1.h4.news-snippet__header Latest News
+      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est veritatis ipsum eos commodi et eligendi, pariatur dolores! Possimus architecto molestias dignissimos, aliquid perferendis nulla praesentium, hic modi, voluptate facere et?
+      p
+        a(href="/read-more", title="Read more") 
+          strong Read more

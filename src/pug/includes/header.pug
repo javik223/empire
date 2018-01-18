@@ -1,46 +1,110 @@
-header.grid-container.full
-  .header.hide-for-large
-    .grid-container
-      .grid-x
-        .small-6.cell
-          include ../fragments/social-icons.pug
-        
-        .small-6.cell.tel
-          small 
-            span.float-right Tel: 01706 230 300
-  
-  nav.grid-container
-    .grid-x.nav
-      .small-8.medium-6.cell
-        a(href="/", title="Walsh Solicitors") 
-          img(src="/assets/img/walsh-solicitors-logo.svg", alt="Walsh solicitors").logo
-      .small-4.medium-6.cell
-        div.icon-menu
-        
-        ul.nav-links
-          li 
-            a(href="/about.html", title="About") About
-          li.dropdown
-            a(href="/services-single.html", title="Services") Services
-
-            ul
-              li
-                a(href="/services-single-civil.html", title="Civil") Civil
-              li 
-                a(href="/services-single-commercial.html", title="Commercial") Commercial  
-              li 
-                a(href="/services-single-education.html", title="Education") Education
-                
-              li 
-                a(href="/services-single-crime.html", title="crime") Crime 
-              li 
-                a(href="/services-single-family.html", title="Family") Family
-              li 
-                a(href="/services-single-private.html", title="Private") Private
-          li
-            a(href="/contact.html", title="Contact Walsh Solicitors") Contact
-          li.social-icons
-            include ../fragments/social-icons-links
-            
-            
-            
+header.header
+  .grid-container
+    nav.nav
+      a(href="/", title="Empire Estates Homepage").nav__logo   
+        img(src="/assets/img/empire-estates-logo.png", alt="empire-estates-logo")
+      ul.nav__links.show-for-large
+        li.dropdown
+          a(href="/lettings", title="Lettings") Lettings
+          ul 
+            li
+              a(href="/lettings/let-properties.html", title="View Properties") View Properties
+            li
+              a(href="/lettings/tenancy-enquiry.html", title="Tenancy Enquiry") Tenancy Enquiry
+            li
+              a(href="/lettings/tenant-fees.html", title="Tenant Fees") Tenant Fees
+        li.dropdown
+          a(href="/sales", title="Sales").active Sales
+          ul 
+            li
+              a(href="/sales/buy-properties.html", title="Buy Properties") View Properties
+            li
+              a(href="/sales/buyer-enquiry.html", title="Buyer Enquiry") Buyer Enquiry
+            li
+              a(href="/sales/book-valuation.html", title="Book Valuation") Book Valuation
+            li
+              a(href="/sales/sales-service.html", title="Sale Service") Sale Service
+            li
+              a(href="/sales/online-sale-service.html", title="Online Sale Service") Online Sale Service
+            li
+              a(href="/sales/services.html", title="Our Services") Our Services
+        li.dropdown
+          a(href="/refurbs", title="Refurbs") Refurbs
+          ul 
+            li
+              a(href="/refurbs/our-projects.html", title="Our Projects") View Projects
+            li
+              a(href="/refurbs/refurbishment-enquiry.html", title="Refurb Enquiry") Refurb Enquiry
+        li.dropdown
+          a(href="/tenants", title="Tenants") Tenants
+          ul 
+            li
+              a(href="/tenants/maintenance.html", title="Maintenance") Maintenance
+        li.dropdown
+          a(href="/landlords", title="Landlords") Landlords
+          ul 
+            li
+              a(href="/landlords/book-valuation.html", title="Book Valuation") Book Valuation
+            li
+              a(href="/landlords/full-management-service.html", title="Full Management Service") Full Management Service
+        li
+          a(href="/about-us.html", title="About Us") About Us
+        li
+          a(href="/contact.html", title="Contact") Contact 
+      .nav__social
+        | Contact: 01282 44 99 22
+        a(href="http://www.facebook.com", title="Facebook").icon.icon-facebook.show-for-medium
+        a(href="http://www.twitter.com", title="Twitter").icon.icon-twitter.show-for-medium
+  .nav__mobile__container.hide-for-large
+    a(href="/", title="Empire Links Menu").menu-icon.hide-for-medium
+      span.icon.icon-menu 
+      | MENU
+    ul.nav__links.nav__links--mobile
+        li.dropdown
+          a(href="/lettings", title="Lettings") Lettings
+          ul 
+            li
+              a(href="/lettings/let-properties.html", title="Letting Properties") View Properties
+            li
+              a(href="/lettings/tenancy-enquiry.html", title="Tenancy Enquiry") Tenancy Enquiry
+            li
+              a(href="/lettings/tenant-fees.html", title="Tenant Fees") Tenant Fees
+        li.dropdown
+          a(href="/sales", title="Sales").active Sales
+          ul 
+            li
+              a(href="/view-properties", title="View Properties") View Properties
+            li
+              a(href="/sales/buyer-enquiry.html", title="Buyer Enquiry") Buyer Enquiry
+            li
+              a(href="/sales/book-valuation.html", title="Book Valuation") Book Valuation
+            li
+              a(href="/online-sale-service", title="Online Sale Service") Online Sale Service
+            li
+              a(href="/sales/services.html", title="Our Services") Our Services
+        li.dropdown
+          a(href="/refurbs", title="Refurbs") Refurbs
+          ul 
+            li
+              a(href="/view-projects", title="View Projects") View Projects
+            li
+              a(href="/refurbs/refurbishment-enquiry.html", title="Refurb Enquiry") Refurb Enquiry
+        li.dropdown
+          a(href="/tenants", title="Tenants") Tenants
+          ul 
+            li
+              a(href="/tenants/maintenance.html", title="Maintenance") Maintenance
+        li.dropdown
+          a(href="/landlords", title="Landlords") Landlords
+          ul 
+            li
+              a(href="/landlords/book-valuation.html", title="Book Valuation") Book Valuation
+            li
+              a(href="/full-management-service", title="Full Management Service") Full Management Service
+        li
+          a(href="/about-us", title="About Us") About Us
+        li
+          a(href="/contact", title="Contact") Contact 
+    .nav__social.hide-for-medium
+        a(href="http://www.facebook.com", title="Facebook").icon.icon-facebook
+        a(href="http://www.twitter.com", title="Twitter").icon.icon-twitter

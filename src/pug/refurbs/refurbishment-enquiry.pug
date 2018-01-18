@@ -1,0 +1,29 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Buyer Enquiry - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Online Sale Service")
+      .hero__text Buyer Enquiry
+  
+  include ../includes/property-search
+  
+
+block main
+  .enquiry-form
+    .enquiry-form__header Your Details
+
+    form(action="/enquiry" method="post")  
+      .enquiry-form__group
+        input(type="text", name="name" placeholder="Name")
+        input(type="text" name="email" placeholder="Email*")
+        input(type="text", name="telephone" placeholder="Telephone")
+        input(type="text" name="budget" placeholder="Budget*")
+        textarea(name="address-of-refurbishment", cols="30", rows="5" placeholder="Address of Refurbishment")
+        textarea(name="additional-information", cols="30", rows="5" placeholder="Additional Information")
+        input(type="submit", value="SEND").button
+
+
+block before-footer
+  include ../includes/before-footer-view-all

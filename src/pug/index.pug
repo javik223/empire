@@ -1,78 +1,80 @@
 extends ./includes/layout.pug
 block variables
-  - var title = "Walsh Solicitors"
+  - var title = "Empire Estates"
+
 block before-main
-  .slider
-    .slider__item
-      img(src="/assets/img/banners/banner-1.jpg", alt="Banner1")
+  .slider.js-slider
+    ul.slides
+      li.slider__item
+        img(src="/assets/img/header-image.jpg", alt="Slider-Image")
+      li.slider__item
+        img(src="/assets/img/header-image2.jpg", alt="Slider-Image")
+      li.slider__item
+        img(src="/assets/img/header-image3.jpg", alt="Slider-Image")
+    .slider__controls
+  
+  include ./includes/property-search
+  
+
 block main
-  .grid-x.intro
-    h1.h2.large-9.primary-color One of the North West Premier Law firms with Solicitors across the region.
-    div.large-9
-      p Our team of solicitors and in-house Counsel have a wealth of experience to help you in all aspects of legal services. We specialise in Civil & Commercial Law, Crime, Education, Family, Wills and Probate. 
-      a(href="/about.html#the-team", title="Meet The Team").button  
-        strong MEET THE TEAM
+  - var properties = [{ img: "/assets/img/property-image.jpg", title: "Queensgate, Nelson BB9", amount: "135,000", description: "Beautiful family home for sale, located in a quiet area of Nelson", beds: "3 beds" }, { img: "/assets/img/property-image.jpg", title: "Napier Street Nelson BB9 OSSN", amount: "54,950", description: "NEWLY DECORATED, 2 receptions, separate kitchen, 2 large bedrooms and family bathroom. Central heated. Great Location. Well presented throughout", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "Heap Street Burnley BB10, 1RL", amount: "37,500", description: "First home buyer or investor – this home is worth a look. Situated close to Burnley town centre and schools", beds: "2 beds" }]
 
-  .grid-x.medium-up-3.grid-margin-x.services-block-grid
-    .cell
-      a(href="/services-single-civil.html", title="Civil").grid-x
-        .small-9.medium-7.float-left
-          h4 Civil
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/civil.svg", alt="Civil").img-icon
-    
-    .cell
-      a(href="/services-single-commercial.html", title="Civil").grid-x
-        .small-9.medium-7.float-left
-          h4 Commercial
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/commercial.svg", alt="Civil").img-icon
+  - var propertiesRent = [{ img: "/assets/img/property-image.jpg", title: "Wickworth Street Nelson BB9", amount: "390 PCM", description: "2 bedroom property to let in a popular area in Nelson.", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "11 Hobart Street, Burnley, BB11 3DQ", amount: "80 Per Week", description: "2 Bedroom terraced property TO LET in popular area of Burnley", beds: "2 beds" }, { img: "/assets/img/property-image.jpg", title: "Herbert Street, Burnley BB11 4Jx", amount: "80 Per Week", description: "1 Bedroom, Fully Re-furbished apartment TO LET in popular area of Burnley", beds: "1 bed" }]
 
-    .cell
-      a(href="/services-single-education.html", title="Civil").grid-x
-        .small-9.medium-7.float-left
-          h4 Education
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/education.svg", alt="Civil").img-icon
-    
-    .cell
-      a(href="/services-single-crime.html", title="Civil").grid-x
-        .small-9.medium-7.float-left
-          h4 Crime
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/crime.svg", alt="Crime").img-icon
-    
-    .cell
-      a(href="/services-single-family.html", title="Civil").grid-x
-        .small-9.medium-7.float-left
-          h4 Family
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/family.svg", alt="Civil").img-icon
+  .grid-x.grid-margin-x
+    .cell.medium-6
+      h3 Welcome to Empire Estates
+      p &nbsp;
+      p We are the estate agents to talk to if you are interested in buying, selling, letting, or renting houses in the local market, offering free no obligation valuations. Renowned for applying the highest standards of quality and integrity in all our property services, our reputation for uncompromising professionalism in everytahing we do is earned day in and day out by serving our clients and earning their trust. We’re passionate about property and are professional in everything we do.
 
-    .cell 
-      a(href="/services-single-private.html", title="Private").grid-x
-        .small-9.medium-7.float-left
-          h4 Private
-          p.readmore Read More &nbsp; &nbsp;
-            span.icon-arrow-right
-        .small-3.medium-5.float-left
-          img(src="/assets/img/private.svg", alt="Private").img-icon
+      p We have put together a selection of Insurance Providers to satisfy any types of properties.. These companies can offer the widest range of Insurance policies covering Businesses, Traders, Home, Building and Contents Insurance, Life Assurance, Landlords, Flats, Rental and Let Property, Shops, Restaurants and Takeaways, etc.
 
-block after-main
-  include fragments/contact-form
+      p Other services provided by Empire Estates include Home Refurbishments, Mortgages and Conveyancing offering the best solution whatever their lifestyle or circumstances.
+    .cell.medium-6
+      img(src="/assets/img/property-image-large.jpg", alt="Property Image")
+
+  .listing
+      h3 Our Latest Properties to Buy
+
+      .property-block
+        each property in properties
+          .property-block__item
+              a(href="/property-template.html", title=property.title) 
+                img(src=property.img, alt=property.title)
+              .property-block__item__content
+                h3.property-block__item__title #{property.title}
+                p 
+                  small #{property.description}
+
+              .property-block__item__specs
+                span £#{property.amount}
+                span #{property.beds}
+            
+              a(href="/property-template.html", title="View more").property-block__item__link.button.small VIEW MORE
   
+  .full-center-button
+    a(href="/sales/buy-properties.html", title="Properties for sale").button 
+      strong VIEW ALL PROPERTIES FOR SALE
   
-  .twitter-follow.grid-container
-    include fragments/twitter-content
-    
-    
+  .listing
+    h3 Our Latest Properties to Rent
+
+    .property-block
+      each property in propertiesRent
+        .property-block__item
+            a(href="/property-template.html", title=property.title) 
+              img(src=property.img, alt=property.title)
+            .property-block__item__content
+              h3.property-block__item__title #{property.title}
+              p 
+                small #{property.description}
+
+            .property-block__item__specs
+              span £#{property.amount}
+              span #{property.beds}
+          
+            a(href="/property-template.html", title="View more").property-block__item__link.button.small VIEW MORE
+
+    .full-center-button
+      a(href="/lettings/let-properties.html", title="Properties for rent").button 
+        strong VIEW ALL PROPERTIES FOR RENT

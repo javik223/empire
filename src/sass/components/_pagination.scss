@@ -1,0 +1,27 @@
+.pagination {
+  text-align: center;
+  padding-top: rem-calc(24);
+  float: left;
+  width: 100%;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    font-weight: bold;
+    padding: rem-calc(8);
+
+    @include breakpoint(small only) {
+      padding: rem-calc(5);
+    }
+
+    &.active {
+      background-color: $black;
+      padding-top: rem-calc(2);
+      padidng-bottom: rem-calc(2);
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}

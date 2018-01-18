@@ -1,0 +1,34 @@
+extends ../includes/layout.pug
+block variables
+  - var title = "Book Valuation - Empire Estates"
+
+block before-main
+  .hero.hero-with-text
+      img(src="/assets/img/hero/correspondence-hero.jpg", alt="Online Sale Service")
+      .hero__text Book Valuation
+  
+  include ../includes/property-search
+  
+
+block main
+  .enquiry-form
+    .enquiry-form__header Landlord Valuation Form
+
+    form(action="/enquiry" method="post")  
+      .enquiry-form__group
+        input(type="text", name="name" placeholder="Name*")
+        input(type="text" name="email" placeholder="Email*")
+        input(type="text" name="phone-number" placeholder="Phone Number*")
+      .enquiry-form__group
+        input(type="text", name="house-number" placeholder="House No.")
+        input(type="text", name="street" placeholder="Street")
+        input(type="text", name="town" placeholder="Town")
+        input(type="text", name="postcode" placeholder="Postcode")
+        input(type="text", name="bedrooms" placeholder="Number of Bedrooms")
+        select(name="valuation")
+          option(value="-") Type of Valuation
+        input(type="submit", value="SEND").button
+
+
+block before-footer
+  include ../includes/before-footer-view-all
